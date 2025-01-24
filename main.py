@@ -274,7 +274,7 @@ async def register_admin(request: Request,
     return RedirectResponse(url="/login", status_code=303)
 
 
-@app.delete("/delete/blog{slug}", status_code=204)
+@app.delete("/delete/blog/{slug}", status_code=204)
 async def delete_blog(slug: str, db: Session = Depends(get_db)):
     try:
         article = db.query(Blog).filter(Blog.title == slug).first()
