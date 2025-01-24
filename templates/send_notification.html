@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Notifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Small centered back home button */
+        .back-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            input, textarea {
+                padding: 10px;
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                padding: 10px;
+                font-size: 1rem;
+            }
+
+            .back-btn {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+        }
+
+        /* For very small screens, like phones in portrait mode */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            input, textarea {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                font-size: 0.95rem;
+            }
+
+            .back-btn {
+                font-size: 0.95rem;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Send Notification</h1>
+    <!-- Form action points to the FastAPI route '/send_notification' -->
+    <form action="/send_notification" method="post">
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+        </div>
+
+        <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" name="body" placeholder="Enter the body of the notification" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Notification</button>
+    </form>
+    <!-- Small and centered Back button -->
+    <a href="/admin" class="back-btn">Cancel</a>
+</div>
+
+</body>
+</html>

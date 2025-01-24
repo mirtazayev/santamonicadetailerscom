@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .user-info,
+        .links-list {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .user-info h2 {
+            font-size: 22px;
+            color: #4CAF50;
+            font-weight: 500;
+        }
+
+        .links-list h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .links-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .links-list li {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            padding: 10px;
+            transition: background-color 0.3s, padding 0.3s;
+            width: 100%;
+        }
+
+        a:hover {
+            background-color: #f1f1f1;
+            padding-left: 15px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+
+            header {
+                font-size: 22px;
+                padding: 15px;
+            }
+
+            .links-list {
+                padding: 15px;
+            }
+
+            a {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 20px;
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .links-list li {
+                margin: 10px 0;
+            }
+
+            a {
+                font-size: 14px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Admin Dashboard</h1>
+</header>
+
+<div class="container">
+    <!-- Display user information -->
+    <div class="user-info">
+        <h2>Welcome, {{ user.username }}!</h2>
+        <br>
+        <p>You are logged in as an admin. Use the links below to manage the website.</p>
+    </div>
+
+    <!-- Links to other pages -->
+    <div class="links-list">
+        <h2>Website Management Links:</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+        <h2>Admin Management Links:</h2>
+        <ul>
+            <li><a href="/admin">Admin Panel</a></li>
+            <li><a href="/add/image">Add New Image (for create new image)</a></li>
+            <li><a href="/delete/image">Delete Image (delete image by id)</a></li>
+            <li><a href="/add/review">Add New Review (for create new review)</a></li>
+            <li><a href="/delete/reviews">Delete Review (delete review by id) </a></li>
+            <li><a href="/add/blog">Add New Blog (for create new article) </a></li>
+            <li><a href="/send_notification">Send Notifications</a></li>
+            <li><a href="/login">Login (for login)</a></li>
+            <li><a href="/admin/register">Register new admin (create new admin)</a></li>
+            <li><a href="/swagger">Swagger UI - API Access</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 ASanta Monica Detailers. All Rights Reserved.</p>
+</footer>
+
+</body>
+
+</html>

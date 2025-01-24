@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9fafb;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .success-message, .error-message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .success-message {
+            color: #28a745;
+        }
+
+        .error-message {
+            color: #dc3545;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            input[type="text"], textarea {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            input[type="text"], textarea {
+                font-size: 12px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Add Your Review</h1>
+    <form id="reviewForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required aria-label="Your Name">
+
+        <label for="description">Your Review</label>
+        <textarea id="description" name="description" placeholder="Write your review here" required
+                  aria-label="Your Review"></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+    <a href="/admin">Cancel</a>
+    <p class="success-message" id="successMessage" aria-live="polite" style="display: none;">Thank you for your
+        review!</p>
+    <p class="error-message" id="errorMessage" aria-live="polite" style="display: none;">There was an error submitting
+        your review. Please try again.</p>
+</div>
+
+<script>
+    const form = document.getElementById('reviewForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Clear previous messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            description: document.getElementById('description').value.trim()
+        };
+
+        if (!formData.name || !formData.description) {
+            errorMessage.textContent = 'Please fill out all fields.';
+            errorMessage.style.display = 'block';
+            return;
+        }
+
+        try {
+            const response = await fetch('/add/review', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                successMessage.style.display = 'block';
+                form.reset();
+            } else {
+                const errorText = await response.text();
+                errorMessage.textContent = `Error: ${errorText}`;
+                errorMessage.style.display = 'block';
+            }
+        } catch (error) {
+            errorMessage.textContent = 'A network error occurred. Please try again.';
+            errorMessage.style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>

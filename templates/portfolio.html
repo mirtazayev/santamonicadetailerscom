@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Car Detailing Services">
+    <meta name="keywords" content="Car Detailing, Auto Spa, Ceramic Coating, Interior Cleaning">
+    <meta name="author" content="Santa Monica Detailers">
+    <title>Car Detailing - Santa Monica Detailers</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828417802"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16828417802');
+    </script>
+    <meta name="description"
+          content="Santa Monica Detailers offers premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating in Santa Monica, CA.">
+    <meta name="keywords"
+          content="car detailing, Santa Monica, auto detailing, exterior cleaning, interior cleaning, paint protection, ceramic coating">
+    <meta name="author" content="Santa Monica Detailers">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Santa Monica Detailers - Professional Car Detailing">
+    <meta property="og:description"
+          content="Premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating. Located in Santa Monica, CA.">
+    <meta property="og:url" content="https://www.santamonicadetailers.com">
+    <meta property="og:image" content="https://www.santamonicadetailers.com/static/logo.png">
+    <meta property="og:site_name" content="Santa Monica Detailers">
+    <meta property="og:locale" content="en_US">
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.santamonicadetailers.com">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CarRepair",
+            "name": "Santa Monica Detailers",
+            "description": "Santa Monica Detailers provides premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating.",
+            "logo": "https://www.santamonicadetailers.com/static/logo.png",
+            "url": "https://www.santamonicadetailers.com",
+            "telephone": "+1 (262) 309-9545",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1948 20th St",
+                "addressLocality": "Santa Monica",
+                "addressRegion": "CA",
+                "postalCode": "90404",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://www.facebook.com/santamonicadetailers",
+                "https://twitter.com/santamonicadetailers",
+                "https://www.instagram.com/santamonicadetailers"
+            ]
+        }
+    </script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/carusel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<!-- Navigation Bar -->
+<header>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="/">Santa Monica Detailers</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<body>
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Our Portfolio</h2>
+        <div class="gallery-grid">
+            {% for image in images %}
+            <img src="{{ image.image }}" alt="Car Detailing Image">
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+        <!-- Map Section (Left side) -->
+        <div class="map-section">
+            <!-- Google Map Embed with Responsive Wrapper -->
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.902273659348!2d-118.47383262361738!3d34.02071937316887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb24d0557adf%3A0xc484140725594251!2s1948%2020th%20St%2C%20Santa%20Monica%2C%20CA%2090404!5e0!3m2!1sen!2sus!4v1737543242976!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><strong>Location: 1948 290th St, Santa Monica, CA 90404</strong></p>
+            <p><strong>Service Areas: Santa Monica, West LA and surrounding areas</strong></p>
+            <p><strong>Working Hours: Every day, 7:00 AM - 5:00 PM</strong></p>
+            <h4>Contact Info: <br><a href="tel:+13092629545">309-262-9545</a></h4>
+            <h4><a href="mailto:info@aquapowers.com">info@aquapowers.com</a></h4>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/privacy-policy">Privacy & Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <p>Stay connected and get the latest updates:</p>
+            <ul class="social-links">
+                <li><a href="https://facebook.com/santamonicadetailers" target="_blank"><i class="fab fa-facebook"></i>
+                    Facebook</a></li>
+                <li><a href="https://instagram.com/santamonicadetailers" target="_blank"><i
+                        class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Santa Monica Detailers - All Rights Reserved</p>
+    </div>
+</footer>
+<script src="/static/scripts.js"></script>
+</body>
+<!-- Swiper.js Script -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {slidesPerView: 2},
+            1024: {slidesPerView: 3},
+        },
+    });
+
+    // Toggle menu
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+<script>
+    // JavaScript to handle form submission with fetch
+    document.getElementById("contact-form").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            message: formData.get('message')
+        };
+
+        try {
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            // Check if the request is successful
+            if (result.success) {
+                // Show the success message
+                alert("Your request has been sent successfully!");
+
+                // Redirect to the main page (home)
+                window.location.href = '/';
+            } else {
+                alert(result.message || 'There was an error sending your message.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('There was an error sending your message. Please try again later.');
+        }
+    });
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828417802"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16828417802');
+    </script>
+    <meta name="description"
+          content="Santa Monica Detailers offers premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating in Santa Monica, CA.">
+    <meta name="keywords"
+          content="car detailing, Santa Monica, auto detailing, exterior cleaning, interior cleaning, paint protection, ceramic coating">
+    <meta name="author" content="Santa Monica Detailers">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Santa Monica Detailers - Professional Car Detailing">
+    <meta property="og:description"
+          content="Premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating. Located in Santa Monica, CA.">
+    <meta property="og:url" content="https://www.santamonicadetailers.com">
+    <meta property="og:image" content="https://www.santamonicadetailers.com/static/logo.png">
+    <meta property="og:site_name" content="Santa Monica Detailers">
+    <meta property="og:locale" content="en_US">
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.santamonicadetailers.com">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CarRepair",
+            "name": "Santa Monica Detailers",
+            "description": "Santa Monica Detailers provides premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating.",
+            "logo": "https://www.santamonicadetailers.com/static/logo.png",
+            "url": "https://www.santamonicadetailers.com",
+            "telephone": "+1 (262) 309-9545",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1948 20th St",
+                "addressLocality": "Santa Monica",
+                "addressRegion": "CA",
+                "postalCode": "90404",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://www.facebook.com/santamonicadetailers",
+                "https://twitter.com/santamonicadetailers",
+                "https://www.instagram.com/santamonicadetailers"
+            ]
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 1.5rem;
+            background-color: white;
+            margin-top: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .created-at {
+            font-size: 0.9rem;
+            color: black;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-text {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            text-align: justify;
+            margin-top: 1rem;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .back-link a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .content {
+                /*padding: 1rem;*/
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content-text {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                /*padding: 0.8rem;*/
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .content-text {
+                font-size: 0.9rem;
+            }
+        }
+
+        nav .logo a {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+    </style>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">Santa Monica Detailers</a>
+            </div>
+    </header>
+</head>
+<body>
+<div class="content">
+    <br>
+    <br>
+    <!-- Display the "Created On" section above the title -->
+    <div class="created-at">Created on: {{ article.created_at.strftime('%B %d, %Y') }}</div>
+    <h1>{{ article.title }}</h1>
+    <div class="content-text">
+        {{ content | safe }}
+    </div>
+    <div class="back-link">
+        <a href="/blog">&larr; Back to Blog</a>
+    </div>
+</div>
+
+</body>
+</html>

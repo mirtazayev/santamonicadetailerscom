@@ -1,0 +1,144 @@
+/* Swiper Carousel */
+.swiper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Added padding for better mobile spacing */
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ffffff; /* Ensure proper contrast */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-slide p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333; /* Improved text contrast */
+    line-height: 1.6;
+}
+
+.swiper-slide span {
+    font-weight: bold;
+    color: #0056b3; /* Changed to match pagination active color */
+    font-size: 1rem;
+}
+
+/* Pagination Bullets */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #007BFF;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin: 0 5px; /* Added space between dots */
+}
+
+.swiper-pagination-bullet:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0056b3;
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007BFF;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.nav-links.open {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .swiper-slide {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .swiper {
+        padding: 30px 15px; /* Adjust padding for better spacing on smaller screens */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .swiper {
+        padding: 20px 10px; /* Minimized padding for mobile */
+    }
+}
