@@ -274,6 +274,20 @@ async def register_admin(request: Request,
     return RedirectResponse(url="/login", status_code=303)
 
 
+@app.delete("/delete/blog{slug}", status_code=204)
+async def delete_blog(slug: str, db: Session = Depends(get_db)):
+    try:
+        article = db.query(Blog).filter(Blog.title == slug).first()
+        if not article:
+            raise HTTPException(status_code=404, detail="Article not found.")
+
+        db.delete(article)
+        db.commit()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to delete the article.") from e
+
+
+
 @app.get("/delete/reviews", response_class=HTMLResponse, tags=['Admin Router'])
 async def show_reviews_page(request: Request, db: Session = Depends(get_db)):
     admin = get_current_admin(request, db)
