@@ -3,264 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy & Contact Information</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <!-- Google tag (gtag.js) -->
+    <title>Privacy Policy - Santa Monica Detailers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Santa Monica Detailers' comprehensive privacy policy and terms of service">
+    <meta name="keywords" content="car detailing privacy, auto care policy, Santa Monica data protection">
+    <meta name="author" content="Santa Monica Detailers">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828417802"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'AW-16828417802');
     </script>
-    <meta name="description"
-          content="Santa Monica Detailers offers premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating in Santa Monica, CA.">
-    <meta name="keywords"
-          content="car detailing, Santa Monica, auto detailing, exterior cleaning, interior cleaning, paint protection, ceramic coating">
-    <meta name="author" content="Santa Monica Detailers">
-    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Santa Monica Detailers - Professional Car Detailing">
-    <meta property="og:description"
-          content="Premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating. Located in Santa Monica, CA.">
-    <meta property="og:url" content="https://www.santamonicadetailers.com">
-    <meta property="og:image" content="https://www.santamonicadetailers.com/static/logo.png">
-    <meta property="og:site_name" content="Santa Monica Detailers">
-    <meta property="og:locale" content="en_US">
-    <!-- Canonical Tag -->
-    <link rel="canonical" href="https://www.santamonicadetailers.com">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "CarRepair",
-            "name": "Santa Monica Detailers",
-            "description": "Santa Monica Detailers provides premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating.",
-            "logo": "https://www.santamonicadetailers.com/static/logo.png",
-            "url": "https://www.santamonicadetailers.com",
-            "telephone": "+1 (262) 309-9545",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "1948 20th St",
-                "addressLocality": "Santa Monica",
-                "addressRegion": "CA",
-                "postalCode": "90404",
-                "addressCountry": "US"
-            },
-            "sameAs": [
-                "https://www.facebook.com/santamonicadetailers",
-                "https://twitter.com/santamonicadetailers",
-                "https://www.instagram.com/santamonicadetailers"
-            ]
-        }
-    </script>
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f8fa;
-            color: #333;
+        :root {
+            --primary: #2A3950;
+            --secondary: #D84315;
+            --accent: #0288D1;
+            --text: #455A64;
+            --light: #F5F7FA;
+            --radius: 16px;
+            --shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
 
-        .container {
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        /* Header Section */
+        .policy-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1B2631 100%);
+            color: white;
+            padding: 8rem 1rem 6rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .policy-header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
             width: 100%;
+            height: 100px;
+            background: var(--light);
+            clip-path: ellipse(75% 100% at 50% 100%);
+        }
+
+        .policy-header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+
+        .policy-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 1.5rem;
         }
 
-        h1, h2 {
-            color: #2e3b4e;
-            margin-bottom: 20px;
-            text-align: center;
+        .content-grid {
+            display: grid;
+            gap: 2.5rem;
+            grid-template-columns: 1fr;
         }
 
-        p, ul {
-            color: #555;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+        /* Policy Cards */
+        .policy-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
         }
 
-        /* Section Styles */
-        .section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+        .policy-card:hover {
+            transform: translateY(-8px);
         }
 
-        .section h3 {
-            color: #2e3b4e;
-            margin-top: 15px;
+        h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0 0 2rem;
+            position: relative;
+            padding-bottom: 1rem;
         }
 
-        .section a {
-            color: #3498db;
-            text-decoration: none;
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
         }
 
-        /* Contact Info Section */
+        /* Content Styling */
+        .effective-date {
+            background: rgba(255,255,255,0.9);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin: -2rem auto 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .policy-hierarchy {
+            margin: 2rem 0;
+        }
+
+        ol {
+            counter-reset: section;
+            padding-left: 2rem;
+        }
+
+        .policy-hierarchy li {
+            margin-bottom: 2rem;
+            position: relative;
+            list-style: none;
+        }
+
+        .policy-hierarchy li::before {
+            content: counters(section, ".") " ";
+            counter-increment: section;
+            position: absolute;
+            left: -2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        ul {
+            padding-left: 1.75rem;
+            margin: 2rem 0;
+        }
+
+        li {
+            margin-bottom: 1.25rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.65em;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 2px;
+            transform: rotate(45deg);
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary) 0%, #1B2631 100%);
+            color: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 2rem;
+        }
+
         .contact-info {
-            background-color: #eaf2f8;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .contact-info p {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+            display: grid;
+            gap: 1.5rem;
         }
 
         .contact-info a {
-            color: #3498db;
-            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            color: white;
             text-decoration: none;
+            transition: background 0.3s ease;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Footer Section */
+        footer {
+            background: var(--primary);
+            color: white;
+            margin-top: 6rem;
+            padding: 4rem 1rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            padding: 1rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            h1, h2 {
-                font-size: 1.8em;
+            .policy-header {
+                padding: 6rem 1rem 4rem;
             }
 
-            .section {
-                padding: 15px;
+            .policy-header h1 {
+                font-size: 2.25rem;
             }
 
-            .contact-info p {
-                font-size: 1em;
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                position: static;
+                margin-top: 2rem;
+            }
+
+            .policy-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+
+            li {
+                padding-left: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
+    <header class="policy-header">
+        <h1>Privacy & Policy</h1>
+        <p>Transparent Practices for Your Peace of Mind</p>
+    </header>
 
-<div class="container">
-    <h1>Santa Monica Detailers - Privacy Policy & Contact Information</h1>
+    <main class="container">
+        <div class="content-grid">
+            <!-- Left Column -->
+            <div>
+                <!-- Privacy Policy Card -->
+                <section class="policy-card">
+                    <h2>Privacy Policy</h2>
+                    <div class="effective-date">Effective: January 1, 2024</div>
 
-    <!-- Privacy Policy Section -->
-    <div class="section">
-        <h2>Privacy & Policy</h2>
-        <p>At Santa Monica Detailers, we are committed to safeguarding your personal information. This Privacy Policy
-            describes the
-            types of data we collect, how we use it, and the security measures we have in place to protect it.</p>
+                    <div class="policy-hierarchy">
+                        <ol>
 
-        <h3>What Information We Collect</h3>
-        <ul>
-            <li><strong>Personal Details:</strong> We may collect your name, email address, phone number, and payment
-                information when you use our services.
-            </li>
-            <li><strong>Usage Data:</strong> We gather information about how you use our website and services, including
-                browsing patterns, IP address, and device type.
-            </li>
-        </ul>
+                                <h3>Information Collection</h3>
+                                <ul>
+                                    Personal identification (name, email, phone)
+                                    Vehicle information (VIN, license plate)
+                                    Payment details processed securely
+                                    Website usage analytics
+                                </ul>
 
-        <h3>How We Use Your Information</h3>
-        <ul>
-            <li>To provide and improve our services, ensuring your experience is seamless and personalized.</li>
-            <li>To communicate with you regarding your orders, account updates, and service-related notifications.</li>
-            <li>To protect our website and services from potential fraud and unauthorized access.</li>
-        </ul>
 
-        <h3>Your Rights</h3>
-        <p>As a user, you have the right to access, correct, or delete your personal information. To exercise your
-            rights, please contact us using the details provided below.</p>
 
-        <h3>Data Security</h3>
-        <p>We prioritize the security of your personal data. While no method of electronic transmission or storage is
-            completely secure, we implement industry-standard practices to safeguard your information.</p>
-    </div>
+                                <h3>Data Usage</h3>
+                                <ul>
+                                    Service appointment management
+                                    Quality improvement initiatives
+                                    Fraud prevention measures
+                                    Marketing communications (opt-out available)
+                                </ul>
 
-    <!-- Terms of Service Section -->
-    <div class="section">
-        <h2>Terms of Service</h2>
-        <p>By using Santa Monica Detailers' services, you agree to the following terms and conditions:</p>
-        <ul>
-            <li>Our services are provided "as-is" and without any warranties or guarantees.</li>
-            <li>It is your responsibility to keep your account details confidential and secure.</li>
-            <li>Failure to comply with our terms may result in the suspension or termination of your account.</li>
-        </ul>
-    </div>
 
-    <!-- Contact Info Section -->
-    <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, concerns, or would like more information, please reach out to us:</p>
-        <p><strong>Phone:</strong> <a href="tel:+13092629545">309-262-9545</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@aqua-powers.com">info@aqua-powers.com</a></p>
-        <p>We are here to assist you with any inquiries regarding our services.</p>
-    </div>
-</div>
-<footer>
-    <div class="footer-container">
-        <!-- Map Section (Left side) -->
-        <div class="map-section">
-            <!-- Google Map Embed with Responsive Wrapper -->
-            <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.902273659348!2d-118.47383262361738!3d34.02071937316887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb24d0557adf%3A0xc484140725594251!2s1948%2020th%20St%2C%20Santa%20Monica%2C%20CA%2090404!5e0!3m2!1sen!2sus!4v1737543242976!5m2!1sen!2sus"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                                <h3>Data Protection</h3>
+                                <ul>
+                                    Enterprise-grade encryption
+                                    Regular security audits
+                                    Limited staff access controls
+                                    PCI-DSS compliance
+                                </ul>
+
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Terms of Service Card -->
+                <section class="policy-card">
+                    <h2>Terms of Service</h2>
+                    <div class="effective-date">Effective: January 1, 2024</div>
+
+                    <div class="policy-hierarchy">
+                        <ol>
+
+                                <h3>Service Agreement</h3>
+                                <ul>
+                                    "As-is" service provision
+                                    Client responsibility for vehicle contents
+                                    Right to refuse service
+                                </ul>
+
+
+
+                                <h3>Financial Terms</h3>
+                                <ul>
+                                    Full payment upon service completion
+                                    5% late fee after 15 days
+                                    $50 chargeback fee
+                                </ul>
+
+
+
+                                <h3>Liability</h3>
+                                <ul>
+                                    Maximum liability = service cost
+                                    Pre-existing damage exclusion
+                                    Force majeure protection
+                                </ul>
+
+                        </ol>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <aside class="contact-card">
+                <div class="contact-info">
+                    <a href="tel:+13102629545">
+                        <i class="fas fa-phone"></i>
+                        (310) 262-9545
+                    </a>
+                    <a href="mailto:info@santamonicadetailers.com">
+                        <i class="fas fa-envelope"></i>
+                        Email Support
+                    </a>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>1948 20th St<br>Santa Monica, CA 90404</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-clock"></i>
+                        <p>Mon-Sun: 7AM - 5PM</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <a href="/services">Exterior Detailing</a>
+                        <a href="/services">Interior Cleaning</a>
+                        <a href="/services">Ceramic Coating</a>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <a href="/about">About Us</a>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/insurance">Insurance</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://facebook.com/santamonicadetailers" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/santamonicadetailers" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/santamonicadetailers" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Santa Monica Detailers. All rights reserved.</p>
             </div>
         </div>
+    </footer>
 
-        <!-- Contact Info Section -->
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p><strong>Location: 1948 290th St, Santa Monica, CA 90404</strong></p>
-            <p><strong>Service Areas: Santa Monica, West LA and surrounding areas</strong></p>
-            <p><strong>Working Hours: Every day, 7:00 AM - 5:00 PM</strong></p>
-            <h4>Contact Info: <br><a href="tel:+13092629545">309-262-9545</a></h4>
-            <h4><a href="mailto:info@aquapowers.com">info@aquapowers.com</a></h4>
-        </div>
+    <script>
+        // Dynamic Year Update
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        <!-- Quick Links Section -->
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/reviews">Reviews</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/privacy-policy">Privacy & Policy</a></li>
-            </ul>
-        </div>
+        // Animate policy cards on scroll
+        document.querySelectorAll('.policy-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
 
-        <!-- Social Media Section -->
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <p>Stay connected and get the latest updates:</p>
-            <ul class="social-links">
-                <li><a href="https://facebook.com/santamonicadetailers" target="_blank"><i class="fab fa-facebook"></i>
-                    Facebook</a></li>
-                <li><a href="https://www.instagram.com/santamonicadetailers" target="_blank"><i
-                        class="fab fa-instagram"></i>
-                    Instagram</a></li>
-            </ul>
-        </div>
-    </div>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }
+                });
+            });
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 Santa Monica Detailers - All Rights Reserved</p>
-    </div>
-</footer>
+            observer.observe(card);
+        });
 
-</footer>
+        // Print shortcut
+        document.addEventListener('keydown', (e) => {
+            if((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
 </body>
 </html>
