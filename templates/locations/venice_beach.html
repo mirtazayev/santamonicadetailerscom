@@ -143,6 +143,8 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            text-decoration: none; /* Removes underline */
+            color: inherit; /* Ensures it takes the default text color */
         }
 
         .nav-links {
@@ -357,15 +359,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+<!-- Navigation -->
 <header>
     <nav>
-        <div class="logo" itemprop="name">Santa Monica Detailers</div>
-        <div class="burger-menu">
+        <a href="/" class="logo" itemprop="name">Santa Monica Detailers</a>
+
+        <div class="burger-menu" aria-label="Toggle navigation">
             <div class="burger-bar"></div>
             <div class="burger-bar"></div>
             <div class="burger-bar"></div>
         </div>
+
         <div class="nav-links">
+            <a href="/">Home</a>
             <a href="/about-us">About Us</a>
             <a href="/locations/service-areas">Service Areas</a>
             <a href="/car-detailing-services/">Services</a>

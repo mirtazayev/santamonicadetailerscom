@@ -3,6 +3,7 @@ import secrets
 from fastapi import FastAPI, Depends, HTTPException, status, Request, Form, UploadFile, File
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
+from fastapi.responses import Response
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -267,12 +268,24 @@ async def add_review_page(request: Request, db: Session = Depends(get_db)):
     return templates.TemplateResponse("add_review.html", {"request": request, "user": admin})
 
 
+@app.get("/add/blog", response_class=HTMLResponse, tags=['Admin Router'])
+async def create_article_page(request: Request, db: Session = Depends(get_db)):
+    admin = get_current_admin(request, db)
+    if not admin:
+        return RedirectResponse(url="/access_denied", status_code=303)
+    return templates.TemplateResponse("add_blog.html", {"request": request, "user": admin})
+
+
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+
 @app.post("/add/blog", tags=['Admin Router'])
 async def add_blog(request: Request, file: UploadFile = File(...), db: Session = Depends(get_db)):
     try:
         contents = await file.read()
         content_str = contents.decode('utf-8')
-
         title = file.filename.rsplit('.', 1)[0]
 
         existing_article = db.query(Blog).filter(Blog.title == title).first()
@@ -287,18 +300,12 @@ async def add_blog(request: Request, file: UploadFile = File(...), db: Session =
         return templates.TemplateResponse("add_blog.html", {"request": request})
 
     except UnicodeDecodeError:
+        logging.error("File encoding issue: Not UTF-8")
         raise HTTPException(status_code=400, detail="Invalid file encoding. Please upload a UTF-8 encoded file.")
 
     except Exception as e:
+        logging.error(f"Unexpected Error: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to upload and save the article: {e}")
-
-
-@app.get("/add/blog", response_class=HTMLResponse, tags=['Admin Router'])
-async def create_article_page(request: Request, db: Session = Depends(get_db)):
-    admin = get_current_admin(request, db)
-    if not admin:
-        return RedirectResponse(url="/access_denied", status_code=303)
-    return templates.TemplateResponse("add_blog.html", {"request": request, "user": admin})
 
 
 @app.get("/add/image", response_class=HTMLResponse, tags=['Admin Router'])
@@ -475,6 +482,43 @@ async def swagger_ui_page(request: Request, db: Session = Depends(get_db)):
         openapi_url="/api/openapi.json",
         title="Swagger UI - Santa Monica Detailers"
     )
+
+
+@app.get("/sitemap.xml", response_class=Response)
+async def sitemap(db: Session = Depends(get_db)):
+    base_url = "https://www.santamonicadetailers.com"
+
+    static_urls = [
+        "/", "/about-us", "/locations/service-areas", "/car-detailing-services/",
+        "/reviews", "/portfolio", "/blog", "/car-detailing-faq", "/locations/culver-city-car-detailing",
+        "/locations/santa-monica-car-detailing", "/locations/malibu-car-detailing",
+        "/locations/venice-beach-car-detailing",
+        "/locations/beverly-hills-car-detailing", "/locations/brentwood-car-detailing",
+        "/locations/westwood-car-detailing", "/locations/marina-del-rey-car-detailing",
+        "/locations/bel-air-car-detailing", "/locations/mar-vista-car-detailing",
+        "/locations/pacific-palisades-car-detailing", "/locations/playa-vista-car-detailing", "/contact",
+        "/privacy-policy"
+
+    ]
+
+    blog_posts = db.query(Blog).all()
+    blog_urls = [f"/blog/{post.title}" for post in blog_posts]
+
+    urls = static_urls + blog_urls
+
+    sitemap_xml = """<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">"""
+
+    for url in urls:
+        sitemap_xml += f"""
+        <url>
+            <loc>{base_url}{url}</loc>
+            <priority>0.8</priority>
+        </url>"""
+
+    sitemap_xml += "</urlset>"
+
+    return Response(content=sitemap_xml, media_type="application/xml")
 
 
 @app.get("/meta.json")
