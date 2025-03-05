@@ -100,6 +100,76 @@ async def home_page(request: Request, db: Session = Depends(get_db)):
         return templates.TemplateResponse("error.html", {"request": request, "error": str(e)})
 
 
+@app.get("/locations/culver-city-car-detailing", tags=['Locations'])
+async def culver_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/culver_city.html", {"request": request})
+
+
+@app.get("/car-detailing-faq")
+async def culver_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("company/faq.html", {"request": request})
+
+
+@app.get("/locations/service-areas")
+async def service_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/service_areas.html", {"request": request})
+
+
+@app.get("/locations/santa-monica-car-detailing")
+async def santa_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/santamonica.html", {"request": request})
+
+
+@app.get("/locations/malibu-car-detailing")
+async def malibu_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/malibu.html", {"request": request})
+
+
+@app.get("/locations/venice-beach-car-detailing")
+async def venice_beach_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/venice_beach.html", {"request": request})
+
+
+@app.get("/locations/beverly-hills-car-detailing")
+async def beverly_hills(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/beverly_hills.html", {"request": request})
+
+
+@app.get("/locations/brentwood-car-detailing")
+async def brentwood(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/brentwood.html", {"request": request})
+
+
+@app.get("/locations/westwood-car-detailing")
+async def westwood(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/westwood.html", {"request": request})
+
+
+@app.get("/locations/marina-del-rey-car-detailing")
+async def marina_del_rey(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/marina_del_rey.html", {"request": request})
+
+
+@app.get("/locations/bel-air-car-detailing")
+async def bel_air(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/bel_air.html", {"request": request})
+
+
+@app.get("/locations/mar-vista-car-detailing")
+async def mar_vista(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/mar_vista.html", {"request": request})
+
+
+@app.get("/locations/pacific-palisades-car-detailing")
+async def pacific_palisades(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/pacific_palisades.html", {"request": request})
+
+
+@app.get("/locations/playa-vista-car-detailing")
+async def playa_vista(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("locations/playa_vista.html", {"request": request})
+
+
 @app.get("/admin", response_class=HTMLResponse, tags=['Admin Router'])
 async def admin_page(request: Request, db: Session = Depends(get_db)):
     admin = get_current_admin(request, db)
@@ -108,14 +178,14 @@ async def admin_page(request: Request, db: Session = Depends(get_db)):
     return templates.TemplateResponse("admin_panel.html", {"request": request, "user": admin})
 
 
-@app.get("/services", response_class=HTMLResponse, tags=['Main Router'])
+@app.get("/car-detailing-services/", response_class=HTMLResponse, tags=['Main Router'])
 async def services_page(request: Request):
-    return templates.TemplateResponse("our_package.html", {"request": request})
+    return templates.TemplateResponse("/company/services.html", {"request": request})
 
 
 @app.get("/contact", response_class=HTMLResponse, tags=['Main Router'])
 async def contact_us_page(request: Request):
-    return templates.TemplateResponse("contact_us.html", {"request": request})
+    return templates.TemplateResponse("company/contact_us.html", {"request": request})
 
 
 @app.post("/contact", tags=['Main Router'])
@@ -127,7 +197,7 @@ async def handle_contact_form(contact_form: ContactForm, db: Session = Depends(g
                 dto=CreateUserDTO(email=contact_form.email, fullname=contact_form.name),
                 db=db
             )
-        send_email(
+        await send_email(
             name=contact_form.name,
             email=contact_form.email,
             phone=contact_form.phone,
@@ -144,7 +214,12 @@ async def handle_contact_form(contact_form: ContactForm, db: Session = Depends(g
 @app.get("/blog", response_class=HTMLResponse, tags=['Main Router'])
 async def blog_page(request: Request, db: Session = Depends(get_db)):
     articles = db.query(Blog).order_by(Blog.created_at.desc()).all()
-    return templates.TemplateResponse("blog.html", {"request": request, "articles": articles})
+    return templates.TemplateResponse("main/blog.html", {"request": request, "articles": articles})
+
+
+@app.get("/about-us")
+async def about_us_page(request: Request, db: Session = Depends(get_db)):
+    return templates.TemplateResponse("company/about_us.html", {"request": request})
 
 
 @app.get("/blog/{slug}", tags=['Main Router'])
@@ -165,13 +240,13 @@ async def blog_page(request: Request, slug: str, db: Session = Depends(get_db)):
 @app.get("/reviews", response_class=HTMLResponse, tags=['Main Router'])
 async def review_page(request: Request, db: Session = Depends(get_db)):
     reviews = review_service.get_all_reviews(db)
-    return templates.TemplateResponse("reviews.html", {"request": request, "reviews": reviews})
+    return templates.TemplateResponse("company/reviews.html", {"request": request, "reviews": reviews})
 
 
 @app.get("/portfolio", response_class=HTMLResponse, tags=['Main Router'])
 async def portfolio_page(request: Request, db: Session = Depends(get_db)):
     images = image_service.get_all_images(db)
-    return templates.TemplateResponse("portfolio.html", {"request": request, "images": images})
+    return templates.TemplateResponse("company/portfolio.html", {"request": request, "images": images})
 
 
 @app.get("/privacy-policy", response_class=HTMLResponse, tags=['Main Router'])
@@ -285,7 +360,6 @@ async def delete_blog(slug: str, db: Session = Depends(get_db)):
         db.commit()
     except Exception as e:
         raise HTTPException(status_code=500, detail="Failed to delete the article.") from e
-
 
 
 @app.get("/delete/reviews", response_class=HTMLResponse, tags=['Admin Router'])
@@ -427,7 +501,7 @@ async def metadata():
         ],
         "author": "Santa Monica Detailers Team",
         "contact": {
-            "email": "contact@santamonicadetailers.com",
+            "email": "info@santamonicadetailers.com",
             "phone": "+1 (262) 309-9545",
             "address": "1948 20th st, Santa Monica, CA"
         },
@@ -440,7 +514,7 @@ async def metadata():
             "instagram": "https://www.instagram.com/santamonicadetailers"
         },
         "support": {
-            "faq_url": "https://www.santamonicadetailers.com/faq",
+            "faq_url": "https://www.santamonicadetailers.com/car-detailing-faq",
             "contact_url": "https://www.santamonicadetailers.com/contact"
         }
     }

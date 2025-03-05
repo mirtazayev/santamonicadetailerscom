@@ -2,17 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Consolidated Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Santa Monica Detailers offers premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating in Santa Monica, CA.">
-    <meta name="keywords"
-          content="car detailing, Santa Monica, auto detailing, exterior cleaning, interior cleaning, paint protection, ceramic coating">
-    <meta name="author" content="Santa Monica Detailers">
-    <meta name="robots" content="index, follow">
-    <title>Car Detailing - Santa Monica Detailers</title>
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828417802"></script>
     <script>
@@ -26,25 +15,56 @@
         gtag('config', 'AW-16828417802');
     </script>
 
+    <!-- Meta Tags for Services Page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Top-rated car detailing services in Santa Monica. We offer exterior & interior cleaning, pet hair removal, ceramic coating, and paint protection. Book now!">
+    <meta name="keywords"
+          content="car detailing Santa Monica, auto detailing, mobile car wash, ceramic coating, interior car cleaning, pet hair removal, best car detailers near me">
+    <meta name="author" content="Santa Monica Detailers">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.placename" content="Santa Monica, CA">
+    <meta name="geo.region" content="US-CA">
+    <title>Car Detailing Services | Santa Monica Detailers</title>
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Santa Monica Detailers - Professional Car Detailing">
+    <meta property="og:title" content="Car Detailing Services in Santa Monica | Santa Monica Detailers">
     <meta property="og:description"
-          content="Premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating. Located in Santa Monica, CA.">
-    <meta property="og:url" content="https://www.santamonicadetailers.com">
+          content="Get the best car detailing services in Santa Monica! Interior & exterior cleaning, pet hair removal, ceramic coating, and more. Book your appointment today!">
+    <meta property="og:url" content="https://www.santamonicadetailers.com/car-detailing-services/">
     <meta property="og:image" content="https://www.santamonicadetailers.com/static/logo.png">
     <meta property="og:site_name" content="Santa Monica Detailers">
 
-    <!-- Schema.org -->
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Car Detailing Services in Santa Monica | Santa Monica Detailers">
+    <meta name="twitter:description"
+          content="Premium car detailing services in Santa Monica. We specialize in interior & exterior cleaning, ceramic coating, and pet hair removal. Book now!">
+    <meta name="twitter:image" content="https://www.santamonicadetailers.com/static/logo.png">
+    onicadetailers.com/static/logo.png">
+
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "AutoDetailing",
             "name": "Santa Monica Detailers",
-            "description": "Santa Monica Detailers provides premium car detailing services including interior and exterior cleaning, paint protection, and ceramic coating.",
-            "logo": "https://www.santamonicadetailers.com/static/logo.png",
-            "url": "https://www.santamonicadetailers.com",
-            "telephone": "+1 (310) 262-9545",
+            "url": "https://www.santamonicadetailers.com/car-detailing-services/",
+            "description": "Premium car detailing services in Santa Monica, including interior and exterior cleaning, paint protection, and ceramic coating.",
+            "serviceType": [
+                "Car Wash",
+                "Auto Wash",
+                "Car Detailing",
+                "Auto Detail",
+                "Car Detail",
+                "Auto Detailing",
+                "Interior Cleaning",
+                "Exterior Cleaning",
+                "Ceramic Coating"
+            ],
+            "image": "https://www.santamonicadetailers.com/static/logo.png",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "1948 20th St",
@@ -53,12 +73,14 @@
                 "postalCode": "90404",
                 "addressCountry": "US"
             },
+            "telephone": "+1 (310) 262-9545",
             "sameAs": [
                 "https://www.facebook.com/santamonicadetailers",
                 "https://www.instagram.com/santamonicadetailers"
             ]
         }
     </script>
+
 
     <!-- External Resources -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -326,7 +348,7 @@
         <div class="nav-links">
             <a href="/about-us">About Us</a>
             <a href="/locations/service-areas">Service Areas</a>
-            <a href="#services">Services</a>
+            <a href="/car-detailing-services/">Services</a>
             <a href="/reviews">Reviews</a>
             <a href="/portfolio">Portfolio</a>
             <a href="/blog">Read Blog</a>
@@ -334,23 +356,14 @@
         </div>
     </nav>
 </header>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Welcome to <span>Santa Monica Detailers</span></h1>
-        <h1>Discover the Art of Premium Car Detailing</h1>
-        <p><strong>Our expert detailing services are designed to revitalize your car, giving it a fresh, like-new shine.
-            Let us
-            bring out the best in your vehicle!</strong></p>
-        <a href="#contact" class="btn">Book Now</a>
-    </div>
-</section>
 <!-- Services Section -->
 <section id="services" class="services">
     <div class="container">
         <br>
-        <h2>Car Detailing Service Packages</h2>
+        <br>
+        <br>
+        <br>
+        <h2>Our Packages</h2>
         <div class="services-grid">
 
             <div class="service">
@@ -376,9 +389,8 @@
                 </ul>
                 <br>
 
-                <a href="#contact" class="book-now-btn">Book Now</a>
+                <a href="/contact" class="book-now-btn">Book Now</a>
             </div>
-
             <div class="service">
                 <img src="/static/images/car_detailing.png" alt="Full Detailing Package" class="service-img">
                 <h3>Full Detailing Package</h3>
@@ -394,7 +406,7 @@
                 <br>
                 <p><strong>Estimated Duration:</strong> 3 to 5 hours</p>
                 <p><strong>Estimated Price:</strong> $220 to $300</p>
-                <a href="#contact" class="book-now-btn">Book now</a>
+                <a href="/contact" class="book-now-btn">Book now</a>
             </div>
             <div class="service">
                 <img src="/static/images/ceramic.png" alt="Premium Polishing & Coating Package" class="service-img">
@@ -410,7 +422,7 @@
                 <br>
                 <p><strong>Estimated Duration:</strong> 4 to 6 hours</p>
                 <p><strong>Estimated Price:</strong> $449 to $849</p>
-                <a href="#contact" class="book-now-btn">Book Now</a>
+                <a href="/contact" class="book-now-btn">Book Now</a>
             </div>
 
         </div>
@@ -422,9 +434,10 @@
     <div class="container">
         <h2>Portfolio</h2>
         <div class="gallery-grid">
-            <img src="/static/images/photo_2_2024-12-18_03-42-09.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_3_2024-12-18_03-42-09.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_4_2024-12-18_03-40-35.jpg" alt="Car Detailing">
+            <img src="/static/images/portfolio/mobile-car-detailing-before-after.jpg" alt="Car Detailing">
+            <img src="/static/images/portfolio/mobile-car-detailing-auto-wash-detail-before-after.jpg"
+                 alt="Car Detailing">
+            <img src="/static/images/portfolio/mobile-car-detailing-auto-wash-before-after.jpg" alt="Car Detailing">
             <img src="/static/images/photo_4_2024-12-18_03-42-09.jpg" alt="Car Detailing">
             <img src="/static/images/photo_3_2024-12-18_03-40-35.jpg" alt="Car Detailing">
             <img src="/static/images/photo_2_2024-12-18_03-40-35.jpg" alt="Car Detailing">
@@ -435,61 +448,101 @@
         <a href="/portfolio" class="btn">More images</a>
     </div>
 </section>
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials">
-    <h2>Testimonials</h2>
-    <!-- Swiper Container -->
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <!-- Dynamically inserted reviews -->
-            {% for review in reviews %}
-                <div class="swiper-slide">
-                    <p>"{{ review.description }}"</p>
-                    <span>- {{ review.name }}</span>
-                </div>
-            {% endfor %}
-        </div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-</section>
+
 
 <!-- Now Serving Section -->
 <section class="now-serving">
     <img src="/static/images/dog.png" alt="Dog Hair Removal">
     <div class="text-content">
-        <h1>Now Offering Dog Hair Removal</h1>
-        <p>We understand the difficulty of removing pet hair from your vehicle. We now offer specialized dog hair
-            removal to make your car look spotless again.</p>
+        <h1>Introducing Dog Hair Removal for a Cleaner Ride!</h1>
+        <p>We specialize in removing even the toughest pet hair from your vehicle. Trust us to give your car a fresh,
+            dog hair-free look.</p>
     </div>
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h3>Get a Free Quote</h3>
+            <form id="contactForm" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                           placeholder="Phone number" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email"
+                           placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="message" name="message" placeholder="Message">
+                </div>
+                <button type="submit" class="cta-button">Request Callback</button>
+            </form>
+        </div>
+    </section>
 </section>
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form id="contact-form" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+<style>
+    /* Contact Form Styles */
+    .contact-form {
+        padding: 3rem 1rem;
+    {#background: #f8fafc;#} text-align: center;
+    }
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="3092629545"
-                   required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"
-                      placeholder="Car model, your zip code and other any additional information."></textarea>
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+    {#background: white;#} padding: 2rem;
+        border-radius: 10px;
+    {#box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);#}
+    }
 
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
+    input::placeholder {
+        color: #94a3b8;
+    }
+</style>
 
+<script>
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const originalText = btn.textContent;
 
+        try {
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value.replace(/\D/g, ''),
+                message: document.getElementById('message').value
+            };
+
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) throw new Error(result.message || 'Request failed');
+
+            alert(result.message || 'Your request has been sent!');
+            e.target.reset();
+        } catch (error) {
+            alert(error.message || 'Error sending message. Please try again.');
+        } finally {
+            btn.disabled = false;
+            btn.textContent = originalText;
+        }
+    });
+</script>
 <footer>
     <div class="footer-container">
         <div class="map-section">
@@ -571,7 +624,7 @@
 </script>
 <!-- Scripts -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="/static/scripts.js"></script>
+<script src="/scripts.js"></script>
 <script>
     // Enhanced Swiper Configuration
     const swiper = new Swiper('.swiper', {

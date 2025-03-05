@@ -16,7 +16,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828417802"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'AW-16828417802');
     </script>
@@ -29,7 +33,7 @@
             --text: #455A64;
             --light: #F5F7FA;
             --radius: 16px;
-            --shadow: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         }
 
         * {
@@ -102,8 +106,8 @@
             padding: 2.5rem;
             box-shadow: var(--shadow);
             margin-bottom: 2rem;
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .policy-card:hover {
@@ -132,12 +136,12 @@
 
         /* Content Styling */
         .effective-date {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             padding: 1rem 1.5rem;
             border-radius: 8px;
             display: inline-block;
             margin: -2rem auto 3rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             font-size: 0.9rem;
             color: var(--text);
         }
@@ -212,7 +216,7 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             color: white;
             text-decoration: none;
@@ -220,7 +224,7 @@
         }
 
         .contact-info a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Footer Section */
@@ -251,7 +255,7 @@
         }
 
         .footer-section a {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             display: block;
             padding: 0.5rem 0;
@@ -273,7 +277,7 @@
             font-size: 1.5rem;
             padding: 1rem;
             border-radius: 50%;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             width: 50px;
             height: 50px;
             display: flex;
@@ -286,7 +290,7 @@
             text-align: center;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Responsive Design */
@@ -325,193 +329,211 @@
     </style>
 </head>
 <body>
-    <header class="policy-header">
-        <h1>Privacy & Policy</h1>
-        <p>Transparent Practices for Your Peace of Mind</p>
-    </header>
+<header class="policy-header">
+    <h1>Privacy & Policy</h1>
+    <p>Transparent Practices for Your Peace of Mind</p>
+</header>
 
-    <main class="container">
-        <div class="content-grid">
-            <!-- Left Column -->
-            <div>
-                <!-- Privacy Policy Card -->
-                <section class="policy-card">
-                    <h2>Privacy Policy</h2>
-                    <div class="effective-date">Effective: January 1, 2024</div>
+<main class="container">
+    <div class="content-grid">
+        <!-- Left Column -->
+        <div>
+            <!-- Privacy Policy Card -->
+            <section class="policy-card">
+                <h2>Privacy Policy</h2>
+                <div class="effective-date">Last updated: March 2025</div>
+                <h3>At Santa Monica Detailers, we take your privacy seriously. This Privacy Policy explains how we
+                    collect, use, and protect your personal information when you use our services.</h3>
+                <div class="policy-hierarchy">
+                    <ol>
 
-                    <div class="policy-hierarchy">
-                        <ol>
+                        <h3> Information We Collect</h3>
+                        <ul>
+                            We may collect the following types of personal information:
 
-                                <h3>Information Collection</h3>
-                                <ul>
-                                    Personal identification (name, email, phone)
-                                    Vehicle information (VIN, license plate)
-                                    Payment details processed securely
-                                    Website usage analytics
-                                </ul>
-
-
-
-                                <h3>Data Usage</h3>
-                                <ul>
-                                    Service appointment management
-                                    Quality improvement initiatives
-                                    Fraud prevention measures
-                                    Marketing communications (opt-out available)
-                                </ul>
+                            Personal Details: Name, phone number, email address, and vehicle information (e.g., make,
+                            model).
+                            Payment Information: Credit/debit card details or other payment methods used for booking.
+                            Service Details: Information related to your service booking, including location and
+                            preferences.
+                        </ul>
 
 
-
-                                <h3>Data Protection</h3>
-                                <ul>
-                                    Enterprise-grade encryption
-                                    Regular security audits
-                                    Limited staff access controls
-                                    PCI-DSS compliance
-                                </ul>
-
-                        </ol>
-                    </div>
-                </section>
-
-                <!-- Terms of Service Card -->
-                <section class="policy-card">
-                    <h2>Terms of Service</h2>
-                    <div class="effective-date">Effective: January 1, 2024</div>
-
-                    <div class="policy-hierarchy">
-                        <ol>
-
-                                <h3>Service Agreement</h3>
-                                <ul>
-                                    "As-is" service provision
-                                    Client responsibility for vehicle contents
-                                    Right to refuse service
-                                </ul>
+                        <h3>Data Usage</h3>
+                        <ul>
+                            We use the information we collect for the following purposes:
+                            To process your service bookings and payments.
+                            To communicate with you regarding your bookings and service updates.
+                            To improve our services and customer experience.
+                            To comply with legal obligations, including tax reporting and regulatory requirements.
+                        </ul>
 
 
+                        <h3>Data Sharing</h3>
+                        <ul>
+                            We do not sell, rent, or trade your personal information to third parties. However, we may
+                            share your information with trusted service providers who assist with our operations, such
+                            as payment processors or marketing platforms. These third parties are obligated to keep your
+                            information secure and use it only for the services they provide.
+                        </ul>
 
-                                <h3>Financial Terms</h3>
-                                <ul>
-                                    Full payment upon service completion
-                                    5% late fee after 15 days
-                                    $50 chargeback fee
-                                </ul>
+                        <h3> Data Security </h3>
+                        <ul>We implement reasonable security measures to protect your personal information from
+                            unauthorized access, disclosure, alteration, or destruction. However, no method of
+                            transmission over the internet or method of electronic storage is 100% secure, so we cannot
+                            guarantee complete security.
+                        </ul>
+                        <h3>Cookies and Tracking Technologies
+                        </h3>
+                        <ul>Our website may use cookies and similar technologies to enhance your experience and analyze
+                            website usage. You can adjust your browser settings to block or delete cookies, but doing so
+                            may impact some features of our website.
+                        </ul>
+                        <h3>Your Rights</h3>
+                        <uL>You have the right to:
 
-
-
-                                <h3>Liability</h3>
-                                <ul>
-                                    Maximum liability = service cost
-                                    Pre-existing damage exclusion
-                                    Force majeure protection
-                                </ul>
-
-                        </ol>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Right Column -->
-            <aside class="contact-card">
-                <div class="contact-info">
-                    <a href="tel:+13102629545">
-                        <i class="fas fa-phone"></i>
-                        (310) 262-9545
-                    </a>
-                    <a href="mailto:info@santamonicadetailers.com">
-                        <i class="fas fa-envelope"></i>
-                        Email Support
-                    </a>
-                    <div>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>1948 20th St<br>Santa Monica, CA 90404</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-clock"></i>
-                        <p>Mon-Sun: 7AM - 5PM</p>
-                    </div>
+                            Access the personal information we hold about you.
+                            Request the correction or deletion of your personal information.
+                            Object to the processing of your personal information in certain circumstances.
+                            To exercise any of these rights, please contact us at info@santamonicadetailers.com.
+                        </uL>
+                        <h3>Retention of Data</h3>
+                        <ul>We retain your personal information for as long as necessary to fulfill the purposes
+                            outlined in
+                            this Privacy Policy or as required by law.
+                        </ul>
+                        <h3>Changes to Privacy Policy</h3>
+                        <ul>We reserve the right to update or modify this Privacy Policy at any time. Any changes will
+                            be posted on this page, with the date of the last update indicated at the top. Your
+                            continued use of our services after any changes to this policy will signify your acceptance
+                            of the updated terms.
+                        </ul>
+                    </ol>
                 </div>
-            </aside>
+            </section>
+
+            <!-- Terms of Service Card -->
+            <section class="policy-card">
+                <h2>Terms of Service</h2>
+                <div class="effective-date">Last updated: March 2025</div>
+                <h1>Welcome to Santa Monica Detailers! These Terms of Service outline the rules and regulations for the
+                    use of our services. By accessing and using our services, you agree to comply with and be bound by
+                    these terms. If you disagree with any part of the terms, please refrain from using our
+                    services.</h1>
+                <div class="policy-hierarchy">
+                    <ol>
+
+                        <h3> Acceptance of Terms</h3>
+                        <ul>
+                            "As-is" service provision
+                            Client responsibility for vehicle contents
+                            Right to refuse service
+
+                            By using our website or booking services, you agree to the terms outlined in this agreement.
+                            We reserve the right to modify these terms at any time. We will notify you of any changes,
+                            and your continued use of our services will constitute acceptance of those changes.
+                        </ul>
+
+
+                        <h3>Services Provided</h3>
+                        <ul>
+                            Santa Monica Detailers offers professional mobile car detailing services, including:
+
+                            Exterior wash
+                            Interior cleaning (vacuuming, upholstery cleaning)
+                            Dog hair removal
+                            Full exterior and interior detailing (excluding polishing)
+                            Additional services as specified on our website
+                        </ul>
+
+
+                        <h3>Liability</h3>
+                        <ul>
+                            To the fullest extent permitted by law, Santa Monica Detailers shall not be held liable for
+                            any indirect, incidental, special, consequential, or punitive damages, including but not
+                            limited to loss of profits, data, or business opportunity, arising from the use of our
+                            services.
+
+                            Our total liability for any claims arising from the services will not exceed the total
+                            amount paid by you for the specific service giving rise to the claim.
+                        </ul>
+                        <h3> Service Cancellations and Rescheduling</h3>
+                        <ul>Cancellation: You can cancel or reschedule your service up to 24 hours in advance without a
+                            fee. Cancellations made within 24 hours of the appointment may be subject to a cancellation
+                            fee.
+                            Late Arrivals: If you are not present at the scheduled location at the time of service, we
+                            may be unable to perform the service, and the appointment will be treated as a cancellation.
+                            Rescheduling: You may reschedule your service by contacting us at least 24 hours in advance.
+                        </ul>
+                        <h3> Customer Responsibilities</h3>
+                        <ul>Accuracy of Information: You are responsible for providing accurate information, including
+                            vehicle details and any special requests. Failure to provide correct information may affect
+                            the quality of the service.
+                            Access to Vehicle: Ensure that the vehicle is accessible at the scheduled time of service.
+                            If the vehicle is inaccessible or requires additional arrangements, we may not be able to
+                            perform the service.
+                            Personal Items: Santa Monica Detailers is not responsible for items left inside your
+                            vehicle. We recommend removing any valuable or sensitive items prior to the service.
+                        </ul>
+                    </ol>
+                </div>
+            </section>
         </div>
-    </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <a href="/services">Exterior Detailing</a>
-                        <a href="/services">Interior Cleaning</a>
-                        <a href="/services">Ceramic Coating</a>
-                    </ul>
+        <!-- Right Column -->
+        <aside class="contact-card">
+            <div class="contact-info">
+                <a href="tel:+13102629545">
+                    <i class="fas fa-phone"></i>
+                    (310) 262-9545
+                </a>
+                <a href="mailto:info@santamonicadetailers.com">
+                    <i class="fas fa-envelope"></i>
+                    Email Support
+                </a>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>1948 20th St<br>Santa Monica, CA 90404</p>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <a href="/about">About Us</a>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul>
-                        <a href="/privacy-policy">Privacy Policy</a>
-                        <a href="/insurance">Insurance</a>
-                    </ul>
+                <div>
+                    <i class="fas fa-clock"></i>
+                    <p>Mon-Sun: 7AM - 5PM</p>
                 </div>
             </div>
+        </aside>
+    </div>
+</main>
 
-            <div class="social-links">
-                <a href="https://facebook.com/santamonicadetailers" target="_blank" rel="noopener">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://instagram.com/santamonicadetailers" target="_blank" rel="noopener">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://youtube.com/santamonicadetailers" target="_blank" rel="noopener">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
 
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Santa Monica Detailers. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<script>
+    // Dynamic Year Update
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    <script>
-        // Dynamic Year Update
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Animate policy cards on scroll
+    document.querySelectorAll('.policy-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
 
-        // Animate policy cards on scroll
-        document.querySelectorAll('.policy-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }
-                });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
             });
-
-            observer.observe(card);
         });
 
-        // Print shortcut
-        document.addEventListener('keydown', (e) => {
-            if((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                e.preventDefault();
-                window.print();
-            }
-        });
-    </script>
+        observer.observe(card);
+    });
+
+    // Print shortcut
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+            e.preventDefault();
+            window.print();
+        }
+    });
+</script>
 </body>
 </html>

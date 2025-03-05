@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 from fastapi import HTTPException
 
 
-def send_email(name: str, email: str, phone: str, message: str):
+async def send_email(name: str, phone: str, email: str, message: str = None):
     sender_email = "info@aqua-powers.com"
     sender_password = "rxdm oabo eyct fzdb"
     admin_email = "abduqodirovabdulloh2005@gmail.com"

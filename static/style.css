@@ -8,7 +8,7 @@
 /* Body styles */
 body {
     /*font-family: Arial, sans-serif;*/
-    background-color: dodgerblue;
+    background-color: whitesmoke;
     color: #333;
     /*line-height: 1.6;*/
 }
@@ -239,7 +239,7 @@ nav .nav-links {
     }
 
     .service {
-        padding: 20px;
+        /*padding: 20px;*/
     }
 
     .book-now-btn {

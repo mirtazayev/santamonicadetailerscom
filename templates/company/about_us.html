@@ -311,6 +311,141 @@
             border-top: 1px solid dodgerblue;
         }
     </style>
+    <style>
+        body {
+        {#font-family: 'Arial', sans-serif;#} margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h1 {
+            font-size: 36px;
+            color: #2f4f4f;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        {#align-items: center;#} gap: 40px;
+            width: 100%;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 45%;
+            overflow: hidden;
+            border-radius: 10px;
+        {#box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);#}
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .content-container {
+            flex: 1;
+            max-width: 45%;
+        }
+
+        .content-container h2 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .content-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .content-container ul li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .content-container ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #4CAF50;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 30px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .cta-button:active {
+            background-color: #388e3c;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-container {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .content-container {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -326,7 +461,7 @@
         <div class="nav-links">
             <a href="/about-us">About Us</a>
             <a href="/locations/service-areas">Service Areas</a>
-            <a href="#services">Services</a>
+            <a href="/car-detailing-services/">Services</a>
             <a href="/reviews">Reviews</a>
             <a href="/portfolio">Portfolio</a>
             <a href="/blog">Read Blog</a>
@@ -334,162 +469,136 @@
         </div>
     </nav>
 </header>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Welcome to <span>Santa Monica Detailers</span></h1>
-        <h1>Discover the Art of Premium Car Detailing</h1>
-        <p><strong>Our expert detailing services are designed to revitalize your car, giving it a fresh, like-new shine.
-            Let us
-            bring out the best in your vehicle!</strong></p>
-        <a href="#contact" class="btn">Book Now</a>
-    </div>
-</section>
-<!-- Services Section -->
-<section id="services" class="services">
-    <div class="container">
+<div class="container">
+    <div class="section-header">
         <br>
-        <h2>Car Detailing Service Packages</h2>
-        <div class="services-grid">
+        <br>
+        <h1>Welcome to Santa Monica Detailers</h1>
+        <p>Your go-to place for top-notch car detailing services. We specialize in making your car shine inside and
+            out!</p>
+    </div>
 
-            <div class="service">
-                <img src="/static/images/basic_wash.png" alt="Basic Package" class="service-img">
-                <h3>Basic Package</h3>
-                <p><strong>What's Included:</strong></p>
-                <ul><br>
-                    <li>Exterior hand wash</li>
-                    <li>Interior vacuum</li>
-                    <li>Window cleaning (inside and outside)</li>
-                    <li>Wipe-down of all surfaces</li>
-                    <li>Tire cleaning and shine</li>
-                </ul>
-                <br>
-                <p><strong>Estimated Duration:</strong> 1 to 2 hours</p>
-                <p><strong>Estimated Price:</strong> $99 to $120</p><br>
-                <p><strong>Optional Add-Ons:</strong></p>
-                <ul>
-                    <li>Pet hair removal: $30</li>
-                    <li>Odor elimination: $40</li>
-                    <li>Engine bay cleaning: $50</li>
-                    <li>Leather seat conditioning: $60</li>
-                </ul>
-                <br>
+    <div class="about-section">
+        <div class="image-container">
+            <img src="/static/logo.png" alt="Car Detailing Service">
+        </div>
+        <div class="content-container">
+            <h2>Who We Are</h2>
+            <p>At Santa Monica Detailers, we are passionate about cars and committed to providing the highest level of
+                detailing services. What began as an idea shared between two childhood friends in September 2024 quickly
+                grew into a fully-fledged business focused on delivering professional car care services across the Santa
+                Monica area. Our founders, driven by a shared love of cars and a desire to create something of their
+                own, saw an opportunity to bring top-notch car detailing services to the community. From the very
+                beginning, we’ve worked tirelessly to build a business that values quality, reliability, and customer
+                satisfaction.</p>
 
-                <a href="#contact" class="book-now-btn">Book Now</a>
-            </div>
+            <p>As a locally owned business, we take pride in our roots. We believe that every car deserves a
+                personalized touch, whether it’s a simple exterior wash or a complete, meticulous detailing job. We
+                understand that your car is more than just a mode of transportation; it’s a reflection of you. That's
+                why we approach every service with care, attention to detail, and a focus on achieving the best results
+                for our clients. Our goal is to make sure that every car we service not only looks immaculate but also
+                feels refreshed and rejuvenated.</p>
 
-            <div class="service">
-                <img src="/static/images/car_detailing.png" alt="Full Detailing Package" class="service-img">
-                <h3>Full Detailing Package</h3>
-                <p><strong>What's Included:</strong></p>
-                <ul><br>
-                    <li>Everything in the Basic Package</li>
-                    <li>Interior shampoo for carpets and upholstery</li>
-                    <li>Deep cleaning of door panels and center console</li>
-                    <li>Dashboard and surface conditioning</li>
-                    <li>Clay bar treatment for exterior</li>
-                    <li>Wax application (3-month protection)</li>
-                </ul>
-                <br>
-                <p><strong>Estimated Duration:</strong> 3 to 5 hours</p>
-                <p><strong>Estimated Price:</strong> $220 to $300</p>
-                <a href="#contact" class="book-now-btn">Book now</a>
-            </div>
-            <div class="service">
-                <img src="/static/images/ceramic.png" alt="Premium Polishing & Coating Package" class="service-img">
-                <h3>Premium Polishing & Coating Package</h3>
-                <p>Enhance your car's appearance and protection with our Premium Polishing & Coating Package. This
-                    package includes everything in the Full Detailing Package, plus:</p>
-                <ul><br>
-                    <li>1-step machine polishing to remove light scratches and swirls</li>
-                    <li>Ceramic coating application for 6-12 months of protection</li>
-                    <li>Headlight restoration for improved visibility</li>
-                    <li>Clay bar treatment for a smooth exterior finish</li>
-                </ul>
-                <br>
-                <p><strong>Estimated Duration:</strong> 4 to 6 hours</p>
-                <p><strong>Estimated Price:</strong> $449 to $849</p>
-                <a href="#contact" class="book-now-btn">Book Now</a>
-            </div>
+            <h2>Our Story</h2>
+            <p>The story of Santa Monica Detailers began in the heart of Santa Monica, where our two founders, driven by
+                their entrepreneurial spirit and a passion for cars, decided to take their love for vehicles and
+                transform it into a business. Both founders had always enjoyed working on cars as a hobby, but it wasn’t
+                until 2024 that they decided to turn that passion into a professional service. They recognized the
+                demand for high-quality, eco-friendly detailing services in their local area and set out to meet that
+                need, offering a mobile service that brings the detailing directly to you.</p>
 
+            <p>From the very first service, Santa Monica Detailers aimed to stand out from the competition by offering
+                personalized, premium services that put customer satisfaction first. Our founders wanted to create a
+                company where attention to detail wasn’t just a catchphrase but the very essence of the business. With
+                eco-friendly products, a customer-first mentality, and a relentless commitment to perfection, Santa
+                Monica Detailers quickly became a trusted name in the community.</p>
+
+            <h2>Our Services</h2>
+            <p>We specialize in a range of services designed to keep your car in top condition, inside and out. From
+                quick washes to deep cleanings, our team is equipped with the best tools and products to give your
+                vehicle the care it deserves. We offer both exterior and interior detailing options, as well as special
+                treatments for pet owners, like our dog hair removal service.</p>
+            <ul>
+                <li>Exterior Wash: Clean and shine your car's exterior to restore its brilliance.</li>
+                <li>Full Interior & Exterior Detailing: A complete, thorough cleaning of every part of your vehicle,
+                    inside and out.
+                </li>
+                <li>Dog Hair Removal: Specialized tools and techniques to remove stubborn pet hair from your car's
+                    upholstery and carpeting.
+                </li>
+                <li>Interior Deep Cleaning: Detailed cleaning of your seats, carpets, upholstery, and surfaces to leave
+                    your car smelling fresh and looking brand new.
+                </li>
+                <li>Eco-Friendly Products: We use the best environmentally friendly products to ensure both your car and
+                    the planet are taken care of.
+                </li>
+            </ul>
+            <a href="/car-detailing-services/">💡 More about our services</a>
+
+            <h2>Why Choose Us?</h2>
+            <p>At Santa Monica Detailers, we don’t just clean cars; we build relationships with our clients based on
+                trust, care, and superior service. Our focus is always on quality and customer satisfaction. Here’s why
+                you should choose us for your car detailing needs:</p>
+            <ul>
+                <li><strong>Eco-Friendly Products:</strong> We’re committed to sustainability. All of our products are
+                    eco-friendly, ensuring that your vehicle gets the best care without harming the environment.
+                </li>
+                <li><strong>Convenience:</strong> We offer mobile detailing, meaning we come to you at a time and
+                    location that suits you best. No more waiting in lines or spending time at a shop!
+                </li>
+                <li><strong>Experienced Team:</strong> Our team consists of dedicated professionals who are trained to
+                    handle every type of car and detailing job, ensuring your vehicle gets the best treatment.
+                </li>
+                <li><strong>Attention to Detail:</strong> We pride ourselves on our meticulous approach. Every service
+                    is performed with precision, and no detail is overlooked.
+                </li>
+                <li><strong>Customer Satisfaction:</strong> Our customers are our top priority. We believe in going the
+                    extra mile to make sure you’re happy with every service.
+                </li>
+            </ul>
+
+            <h2>Our Mission</h2>
+            <p>At Santa Monica Detailers, our mission is simple: to provide exceptional car detailing services while
+                offering a hassle-free and trustworthy experience. We want to make sure your car looks brand new, both
+                inside and out, while using services that enhance its beauty and longevity. We aim to exceed customer
+                expectations with every service, whether it’s a quick wash or a full detailing package. Our goal is to
+                leave every customer feeling satisfied, knowing their car has received the best care possible.</p>
+
+            <p>Since our founding in September 2024, we’ve been dedicated to transforming the way people view car care
+                in the Santa Monica area. Our mission extends beyond just detailing — it’s about creating a positive
+                impact in our community and offering services that provide real value to our clients. We’re not just in
+                the business of cleaning cars; we’re here to help you take pride in the vehicle you drive and enhance
+                your ownership experience.</p>
+
+            <a href="/contact" class="cta-button">Book Your Detailing Service Today</a>
         </div>
     </div>
-</section>
 
-<!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2>Portfolio</h2>
-        <div class="gallery-grid">
-            <img src="/static/images/photo_2_2024-12-18_03-42-09.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_3_2024-12-18_03-42-09.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_4_2024-12-18_03-40-35.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_4_2024-12-18_03-42-09.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_3_2024-12-18_03-40-35.jpg" alt="Car Detailing">
-            <img src="/static/images/photo_2_2024-12-18_03-40-35.jpg" alt="Car Detailing">
-        </div>
-    </div>
-    <br><br>
-    <div class="gallery-item">
-        <a href="/portfolio" class="btn">More images</a>
-    </div>
-</section>
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials">
-    <h2>Testimonials</h2>
-    <!-- Swiper Container -->
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <!-- Dynamically inserted reviews -->
-            {% for review in reviews %}
-                <div class="swiper-slide">
-                    <p>"{{ review.description }}"</p>
-                    <span>- {{ review.name }}</span>
-                </div>
-            {% endfor %}
-        </div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-</section>
-
-<!-- Now Serving Section -->
-<section class="now-serving">
-    <img src="/static/images/dog.png" alt="Dog Hair Removal">
-    <div class="text-content">
-        <h1>Now Offering Dog Hair Removal</h1>
-        <p>We understand the difficulty of removing pet hair from your vehicle. We now offer specialized dog hair
-            removal to make your car look spotless again.</p>
-    </div>
-</section>
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form id="contact-form" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="3092629545"
-                   required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"
-                      placeholder="Car model, your zip code and other any additional information."></textarea>
-
-            <button type="submit" class="btn">Send Message</button>
+</div>
+<!-- Contact Form Section -->
+<section class="contact-form">
+    <div class="form-container">
+        <h3>Get a Free Quote</h3>
+        <form id="contactForm" method="POST">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Your Full Name">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                       placeholder="3102629545" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email"
+                       placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="message" name="message" placeholder="Message">
+            </div>
+            <button type="submit" class="cta-button">Request Callback</button>
         </form>
     </div>
 </section>
-
-
+<br>
 <footer>
     <div class="footer-container">
         <div class="map-section">

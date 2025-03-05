@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detailing FAQs | Santa Monica Detailers | Auto detailing FAQs</title>
+    <meta name="description"
+          content="Get answers to common questions about mobile car detailing. Learn about our services, booking process, and pricing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        .active .answer {
+            max-height: 500px;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .active .chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How long does a full detail take?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A full detail typically takes between 3 to 5 hours, depending on the size and condition of your vehicle. Factors such as pet hair, deep stains, and exterior treatments can extend this time. We will give you an estimate when you book!"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is included in a full car detail?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our full car detail includes both interior and exterior cleaning. This involves vacuuming the seats, carpets, and trunk, as well as deep cleaning of the dashboard, console, and doors. The exterior is washed, dried, and treated with a protective layer."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you remove dog hair from my car?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we specialize in dog hair removal! We use specialized tools and techniques to effectively remove pet hair from all surfaces, including seats, carpets, and upholstery."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do I need to be home for the mobile detailing service?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No, you don’t need to be home! We offer a convenient mobile detailing service where we come to your location. Just let us know where to find your vehicle, and we'll take care of the rest."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I book a car detailing service?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can book a car detailing service directly on our website. Simply select the service you need, choose your preferred date and time, and provide your location details. Alternatively, you can contact us via phone or email for assistance."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer exterior polishing services?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No, we currently do not offer exterior polishing services. Our focus is on cleaning and detailing your vehicle's interior and exterior, ensuring a spotless and fresh finish."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is your mobile detailing service available all week?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, our mobile detailing service is available Monday through Saturday. We work around your schedule to make sure your car gets the attention it deserves, at a time that works for you."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What areas do you serve?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We provide mobile detailing services in and around the Santa Monica area. If you're located nearby, feel free to reach out to us to confirm if we can come to your location!"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you use eco-friendly cleaning products?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we prioritize using eco-friendly cleaning products that are safe for both the environment and your vehicle. We believe in sustainable practices while still delivering top-quality results."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I schedule a detailing appointment for the weekend?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we offer weekend appointments! You can schedule your mobile detailing service for either Saturday or Sunday, depending on availability."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What payment methods do you accept?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We accept various payment methods, including credit cards, debit cards, and mobile payment platforms like Apple Pay and Google Pay. Payment is collected after the service is completed."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I know if my car needs a full detail?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "If your car is looking dirty or has accumulated dust, pet hair, or stains over time, it might be time for a full detail. A full detail will make your car look and feel brand new again!"
+                    }
+                }
+            ]
+        }
+    </script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutomotiveBusiness",
+        "name": "Santa Monica Detailers",
+        "description": "Santa Monica Detailers provides premium car detailing services, including interior and exterior cleaning, paint protection, and ceramic coating in Santa Monica, CA.",
+        "image": "https://www.santamonicadetailers.com/static/logo.png",
+        "logo": "https://www.santamonicadetailers.com/static/logo.png",
+        "url": "https://www.santamonicadetailers.com",
+        "telephone": "+1-310-262-9545",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1948 20th St",
+            "addressLocality": "Santa Monica",
+            "addressRegion": "CA",
+            "postalCode": "90404",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "34.024212",
+            "longitude": "-118.481276"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "07:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "07:00",
+                "closes": "17:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/santamonicadetailers",
+            "https://www.instagram.com/santamonicadetailers"
+        ]
+    }
+</script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: dodgerblue;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f97316;
+        }
+
+        /* Mobile Menu Styles */
+        .burger-menu {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .burger-bar {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .active .burger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .active .burger-bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .active .burger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                right: -100%;
+                flex-direction: column;
+                background: dodgerblue;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transition: right 0.3s;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/background.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        {#margin-top: 60px;#}
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: dodgerblue;
+        }
+
+        .cta-button {
+            background: #f97316;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ea580c;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: whitesmoke;
+        }
+
+        .section h2 {
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .services-grid, .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .now-serving {
+            background: whitesmoke;
+            color: black;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .now-serving img {
+            width: 45%;
+            max-width: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .now-serving .text-content {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .now-serving {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .now-serving img {
+                width: 100%;
+                max-width: none;
+            }
+
+            .services-grid, .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: dodgerblue;
+            color: white;
+            padding: 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid dodgerblue;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+<!-- Navigation -->
+<header>
+    <nav>
+        <div class="logo" itemprop="name">Santa Monica Detailers</div>
+        <div class="burger-menu">
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+        </div>
+        <div class="nav-links">
+            <a href="/about-us">About Us</a>
+            <a href="/locations/service-areas">Service Areas</a>
+            <a href="/car-detailing-services/">Services</a>
+            <a href="/reviews">Reviews</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/blog">Read Blog</a>
+            <a href="/car-detailing-faq">FAQ</a>
+        </div>
+    </nav>
+</header>
+<br>
+<br>
+<br>
+<div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6 text-center">Car Detailing FAQs</h1>
+    <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer1">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">How do I book a detailing service?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer1" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Book through our website's scheduling tool or call us at
+                        <a href="tel:+13102629545" class="text-blue-600">(310) 262-9545</a>. <br> We offer:
+                    </p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Instant online booking confirmation</li>
+                        <li>Same-day appointments (subject to availability)</li>
+                        <li>Flexible rescheduling options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer2">
+                <span class="text-lg font-semibold text-gray-900" itemprop="name">Do I need to be present during the detailing service?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer2" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>No, as long as we have access to your vehicle, we can complete the service while you go about
+                        your day.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer3">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">How long does a full detail take?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>A full interior and exterior detail typically takes 2 to 4 hours, depending on the condition of
+                        the
+                        vehicle.</p>
+                </div>
+            </div>
+        </div>
+
+        <! -- FAQ Item 4 -->
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer4">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">What is car detailing, and how is it different from a car wash?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Car detailing involves a thorough cleaning and restoration of a vehicle, inside and out, to
+                        restore its original condition. Unlike a regular car wash, detailing includes deep cleaning,
+                        waxing, polishing, and attention to the smallest details.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer5">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">What is included in your basic car wash service?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Our basic car wash includes an exterior clean, vacuuming of the interior, and removal of trash.
+                        It’s perfect for a quick refresh of your vehicle's appearance.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer6">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">Do you offer dog hair removal in your car detailing service?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Yes, we specialize in removing dog hair from all surfaces of your vehicle. Our team uses
+                        specialized tools and techniques to effectively remove pet hair from carpets, seats, and
+                        upholstery.
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer7">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name"> What types of vehicles do you service?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>YWe service all types of vehicles, including cars, trucks, SUVs, vans, and motorcycles. We also
+                        specialize in detailing luxury, classic, and high-end vehicles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer8">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">How long does a car detailing service take?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>The time required for detailing varies depending on the size of your vehicle and the service you
+                        choose. A basic wash takes about 30-45 minutes, while a full detailing service typically takes
+                        2-4 hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer9">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">What are the benefits of professional car detailing?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Professional detailing helps preserve the value of your car, protects its paint from damage, and
+                        improves air quality by removing allergens and bacteria from the interior. It also provides a
+                        more polished and appealing appearance.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer10">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name"> How often should I get my car detailed?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>We recommend having your car detailed every 3-6 months, depending on your driving habits, the
+                        climate, and how often your vehicle is exposed to dirt and contaminants.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer11">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">Do I need to make an appointment for a car detailing service?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Yes, we recommend scheduling an appointment in advance to ensure availability. You can book
+                        online through our website or contact us directly to schedule your service.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer12">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">Is it safe to get my car detailed during hot or cold weather?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>Yes, our team is equipped to handle detailing in all weather conditions. However, extreme
+                        temperatures may slightly affect the time it takes to complete certain services, like waxing,
+                        but rest assured, we use high-quality products suitable for any season.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item bg-white rounded-lg shadow-lg" itemprop="mainEntity" itemscope
+             itemtype="https://schema.org/Question">
+            <button class="w-full px-6 py-4 text-left flex justify-between items-center"
+                    aria-expanded="false"
+                    aria-controls="answer13">
+                <span class="text-lg font-semibold text-gray-900"
+                      itemprop="name">Will detailing my car damage the paint or interior?</span>
+                <i class="chevron fas fa-chevron-down text-blue-600 ml-2"></i>
+            </button>
+            <div id="answer3" class="answer px-6 pb-0"
+                 itemscope itemtype="https://schema.org/Answer"
+                 itemprop="acceptedAnswer">
+                <div class="pb-4 text-gray-600" itemprop="text">
+                    <p>No, our professional detailing services are designed to enhance and protect your vehicle's paint
+                        and interior. We use high-quality, safe products that are suitable for all vehicle types.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<section class="mt-12 bg-blue-50 rounded-lg p-6 text-center">
+    <h2 class="text-2xl font-bold mb-4">Still have questions?</h2>
+    <p class="mb-4">We're here to help! Contact us:</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:+13102629545" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+            <i class="fas fa-phone mr-2"></i>Call Now
+        </a>
+        <a href="/contact" class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900">
+            <i class="fas fa-envelope mr-2"></i>Email Us
+        </a>
+    </div>
+</section>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const button = item.querySelector('button');
+        const answer = item.querySelector('.answer');
+
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            item.classList.toggle('active');
+
+            if (!isExpanded) {
+                setTimeout(() => {
+                    answer.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+                }, 300);
+            }
+        });
+    });
+</script>
+
+<footer>
+    <div class="footer-container">
+        <div class="map-section">
+            <div class="map-wrapper">
+                <iframe
+                        title="Our Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.902273659348!2d-118.47383262361738!3d34.02071937316887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb24d0557adf%3A0xc484140725594251!2s1948%2020th%20St%2C%20Santa%20Monica%2C%20CA%2090404!5e0!3m2!1sen!2sus!4v1737543242976!5m2!1sen!2sus"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <address>
+                <p><strong>Location:</strong> 1948 20th St, Santa Monica, CA 90404</p>
+                <p><strong>Service Areas:</strong> Santa Monica &amp; West LA</p>
+                <p><strong>Hours:</strong> Daily 7AM - 5PM</p>
+                <h4><a href="tel:+13102629545">(310) 262-9545</a></h4>
+                <h4><a href="mailto:info@santamonicadetailers.com">info@santamonicadetailers.com</a></h4>
+            </address>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/car-detailing-services/">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/blog">Read Blog</a></li>
+                <li><a href="/locations/service-areas"> Service Areas</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul class="social-links">
+                <li><a href="https://facebook.com/santamonicadetailers" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a></li>
+                <li><a href="https://instagram.com/santamonicadetailers" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Santa Monica Detailers - All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    burgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burgerMenu.classList.toggle('active');
+    });
+
+    // Update Copyright Year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>

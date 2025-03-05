@@ -5,4 +5,4 @@ class ContactForm(BaseModel):
     name: str
     email: str
     phone: str
-    message: str
+    message: str = None
