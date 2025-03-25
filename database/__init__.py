@@ -5,8 +5,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 
 # PostgreSQL database URL
-DATABASE_URL = "postgresql://santamonica:npg_ykHrdc3LE8FS@ep-lively-dawn-a4n0qvmn.us-east-1.pg.koyeb.app/koyebdb"
-# DATABASE_URL = "sqlite:///database.db"
+# DATABASE_URL = "postgresql://santamonica:npg_ykHrdc3LE8FS@ep-lively-dawn-a4n0qvmn.us-east-1.pg.koyeb.app/koyebdb"
+DATABASE_URL = "sqlite:///database.db"
 # Create the SQLAlchemy engine
 engine = create_engine(
     DATABASE_URL,
