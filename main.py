@@ -184,30 +184,95 @@ async def services_page(request: Request):
     return templates.TemplateResponse("/company/services.html", {"request": request})
 
 
+# @app.get("/contact", response_class=HTMLResponse, tags=['Main Router'])
+# async def contact_us_page(request: Request):
+#     return templates.TemplateResponse("company/contact_us.html", {"request": request})
+#
+#
+# @app.post("/contact", tags=['Main Router'])
+# async def handle_contact_form(contact_form: ContactForm, db: Session = Depends(get_db)):
+#     try:
+#         existing_user = db.query(Users).filter(Users.email == contact_form.email).first()
+#         if not existing_user:
+#             create_user(
+#                 dto=CreateUserDTO(email=contact_form.email, fullname=contact_form.name),
+#                 db=db
+#             )
+#         await send_email(
+#             name=contact_form.name,
+#             email=contact_form.email,
+#             phone=contact_form.phone,
+#             message=contact_form.message
+#         )
+#         return JSONResponse(content={"success": True, "message": "Your request has been sent!"})
+#     except Exception as e:
+#         return JSONResponse(
+#             content={"success": False, "message": f"An error occurred: {str(e)}"},
+#             status_code=500
+#         )
+
+import httpx
+from fastapi import FastAPI, Request, Depends, Form
+from fastapi.responses import HTMLResponse, JSONResponse
+
+
 @app.get("/contact", response_class=HTMLResponse, tags=['Main Router'])
 async def contact_us_page(request: Request):
     return templates.TemplateResponse("company/contact_us.html", {"request": request})
 
 
 @app.post("/contact", tags=['Main Router'])
-async def handle_contact_form(contact_form: ContactForm, db: Session = Depends(get_db)):
+async def handle_contact_form(
+        request: Request,
+        name: str = Form(...),
+        email: str = Form(...),
+        phone: str = Form(...),
+        message: str = Form(None),
+        g_recaptcha_response: str = Form(..., alias="g-recaptcha-response"),
+        db: Session = Depends(get_db)
+):
+    # ---------------------------
+    # 1️⃣ VERIFY GOOGLE CAPTCHA
+    # ---------------------------
+    SECRET_KEY = "6LeZ2yMsAAAAADC7mvus_wUOY7qA8tGAAYI3Zttj"
+
+    verify_url = "https://www.google.com/recaptcha/api/siteverify"
+    data = {
+        "secret": SECRET_KEY,
+        "response": g_recaptcha_response
+    }
+
+    async with httpx.AsyncClient() as client:
+        captcha_result = await client.post(verify_url, data=data)
+        captcha_json = captcha_result.json()
+
+    if not captcha_json.get("success"):
+        return JSONResponse(
+            {"success": False, "message": "Captcha failed. Please try again."},
+            status_code=400
+        )
+
     try:
-        existing_user = db.query(Users).filter(Users.email == contact_form.email).first()
+        existing_user = db.query(Users).filter(Users.email == email).first()
+
         if not existing_user:
             create_user(
-                dto=CreateUserDTO(email=contact_form.email, fullname=contact_form.name),
+                dto=CreateUserDTO(email=email, fullname=name),
                 db=db
             )
+
         await send_email(
-            name=contact_form.name,
-            email=contact_form.email,
-            phone=contact_form.phone,
-            message=contact_form.message
+            name=name,
+            email=email,
+            phone=phone,
+            message=message
         )
-        return JSONResponse(content={"success": True, "message": "Your request has been sent!"})
+
+        return JSONResponse({"success": True, "message": "Your request has been sent!"})
+
     except Exception as e:
         return JSONResponse(
-            content={"success": False, "message": f"An error occurred: {str(e)}"},
+            {"success": False, "message": f"An error occurred: {str(e)}"},
             status_code=500
         )
 

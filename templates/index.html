@@ -12,6 +12,8 @@
     <meta name="author" content="Santa Monica Detailers">
     <meta name="robots" content="index, follow">
     <title>Car Detailing - Santa Monica Detailers | Auto Detailing</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <link rel="icon" type="image/png" href="/static/logo.png">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16828417802"></script>
@@ -475,7 +477,8 @@
 <section id="contact" class="contact">
     <div class="container">
         <h2>Contact Us</h2>
-        <form id="contact-form" class="contact-form">
+
+        <form id="contact-form" class="contact-form" method="POST" action="/contact">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -483,16 +486,21 @@
             <input type="email" id="email" name="email" required>
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="3092629545"
-                   required>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="3092629545" required>
+
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4"
-                      placeholder="Car model, your zip code and other any additional information."></textarea>
+                      placeholder="Car model, your zip code and any additional information."></textarea>
 
+            <!-- Google reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6LeZ2yMsAAAAAEQap9TT12LiQPA1y5v6jfD1Ptvp"></div>
+            <br>
             <button type="submit" class="btn">Send Message</button>
         </form>
     </div>
 </section>
+
 
 
 <footer>
