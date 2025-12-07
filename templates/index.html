@@ -502,7 +502,6 @@
 </section>
 
 
-
 <footer>
     <div class="footer-container">
         <div class="map-section">
@@ -612,30 +611,39 @@
     // Form Handling with Loading States
     document.getElementById("contact-form").addEventListener("submit", async (e) => {
         e.preventDefault();
-        const btn = e.target.querySelector('button');
+
+        const btn = e.target.querySelector("button");
         const originalText = btn.textContent;
 
         try {
             btn.disabled = true;
-            btn.textContent = 'Sending...';
+            btn.textContent = "Sending...";
 
-            const formData = new FormData(e.target);
+            const formData = new FormData(e.target); // KEEP AS FORMDATA
+
             const response = await fetch('/contact', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(Object.fromEntries(formData))
+                body: formData  // DO NOT SET HEADERS — browser will add them automatically
             });
 
-            if (!response.ok) throw new Error('Network error');
+            const result = await response.json();
+
+            if (!result.success) {
+                alert(result.message || "Captcha or form failed.");
+                return;
+            }
+
             alert('Message sent successfully!');
             e.target.reset();
-        } catch (error) {
-            alert('Error sending message. Please try again.');
+            grecaptcha.reset(); // reset captcha
+        } catch (err) {
+            alert('Error sending message. Try again.');
         } finally {
             btn.disabled = false;
             btn.textContent = originalText;
         }
     });
+
 
     // Year Update
     document.getElementById('current-year').textContent = new Date().getFullYear();
